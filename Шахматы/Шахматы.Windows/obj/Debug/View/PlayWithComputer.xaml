@@ -1,0 +1,107 @@
+﻿<Page
+    x:Name="pageRoot"
+    x:Class="Шахматы.View.PlayWithComputer"
+    DataContext="{Binding DefaultViewModel, RelativeSource={RelativeSource Self}}"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Шахматы.View"
+    xmlns:common="using:Шахматы.Common"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    xmlns:viewmodel ="using:Шахматы.ViewModel">
+
+    <Page.Resources>
+        <!-- TODO: Delete this line if the key AppName is declared in App.xaml -->
+        <x:String x:Key="AppName">Play with computer</x:String>
+        <viewmodel:TimeFormatConverter x:Name="timeFormatConverter"/>
+    </Page.Resources>
+
+    <!--
+        This grid acts as a root panel for the page that defines two rows:
+        * Row 0 contains the back button and page title
+        * Row 1 contains the rest of the page layout
+    -->
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.ChildrenTransitions>
+            <TransitionCollection>
+                <EntranceThemeTransition/>
+            </TransitionCollection>
+        </Grid.ChildrenTransitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="140"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Back button and page title -->
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="120"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="backButton" Margin="39,59,39,0" Command="{Binding NavigationHelper.GoBackCommand, ElementName=pageRoot}"
+                        Style="{StaticResource NavigationBackButtonNormalStyle}"
+                        VerticalAlignment="Top"
+                        AutomationProperties.Name="Back"
+                        AutomationProperties.AutomationId="BackButton"
+                        AutomationProperties.ItemType="Navigation Button"/>
+            <TextBlock x:Name="pageTitle" Text="{StaticResource AppName}" Style="{StaticResource HeaderTextBlockStyle}" Grid.Column="1" 
+                        IsHitTestVisible="false" TextWrapping="NoWrap" VerticalAlignment="Bottom" Margin="0,0,30,40"/>
+        </Grid>
+        <StackPanel Width="1300" Margin="20,20,20,20" Grid.Row="1" Orientation="Horizontal">
+            <StackPanel>
+                <StackPanel Orientation="Horizontal" Width="800">
+                    <Image x:Name="secondPlayerImage" Height="80" Margin="61,0,0,10"/>
+                    <StackPanel Margin="10,0,0,0">
+                        <TextBlock FontSize="24">
+                                <Run x:Name="secondPlayerName"/>
+                                <Run>,</Run>
+                                <Run x:Name="secondPlayerAge"/>
+                        </TextBlock>
+                        <Image x:Name="flagOfSecondPlayer" Width="30" Height="20" Margin="0,5,0,0"/>
+                    </StackPanel>
+                    <StackPanel Background="DarkGray" Width="200" Height="50" HorizontalAlignment="Right" Margin="20,0,0,0">
+                        <TextBlock Text="{Binding BlacksSeconds, Converter={StaticResource ResourceKey=timeFormatConverter}}" FontSize="30" Foreground="Black" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </StackPanel>
+                </StackPanel>
+                <StackPanel>
+                    <Image Source="/Assets/ChessFieldGreen.png" Width="624" Margin="0,30,0,0"/>
+                    <ItemsControl x:Name="playArea" HorizontalAlignment="Center">
+                        <ItemsControl ItemsSource="{Binding Figures}">
+                            <ItemsControl.ItemsPanel>
+                                <ItemsPanelTemplate>
+                                    <Canvas Background="Transparent" Margin="48,-672,0,0" Width="576" Height="576"/>
+                                </ItemsPanelTemplate>
+                            </ItemsControl.ItemsPanel>
+                        </ItemsControl>
+                    </ItemsControl>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Width="800">
+                    <Image x:Name="firstPlayerImage" Height="80" Margin="61,0,0,10"/>
+                    <StackPanel Margin="10,0,0,0">
+                        <TextBlock FontSize="24">
+                                <Run x:Name="firstPlayerName"/>
+                                <Run>,</Run>
+                                <Run x:Name="firstPlayerAge"/>
+                        </TextBlock>
+                        <Image x:Name="flagOfFirstPlayer" Width="30" Height="20" Margin="0,5,0,0"/>
+                    </StackPanel>
+                    <StackPanel Background="DarkGray" Width="200" Height="50" HorizontalAlignment="Right" Margin="20,0,0,0">
+                        <TextBlock Text="{Binding WhitesSeconds, Converter={StaticResource ResourceKey=timeFormatConverter}}" FontSize="30" Foreground="Black" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </StackPanel>
+                </StackPanel>
+            </StackPanel>
+            <StackPanel Width="400" Background="White" Height="650">
+                <ScrollViewer>
+                    <ListBox Width="350" HorizontalAlignment="Center" Height="500" Foreground="Black" FontWeight="Bold" FontSize="24" ItemsSource="{Binding Notation}" BorderThickness="2" BorderBrush="Black" Margin="0,30,0,0"/>
+                </ScrollViewer>
+                <StackPanel Orientation="Horizontal" Width="350" Margin="25,10,25,0">
+                    <AppBarButton x:ConnectionId='1' x:Name="resign" Label="Resign" Icon="Flag" RequestedTheme="Light" HorizontalAlignment="Left"                      IsEnabled="False"/>
+                    <AppBarButton x:ConnectionId='2' x:Name="draw" Label="Draw" Foreground="Black" Icon="People" RequestedTheme="Light" Margin="25,0,25,0"                    IsEnabled="False"/>
+                    <AppBarButton x:ConnectionId='3' x:Name="download" Label="Download" Foreground="Black" Icon="Download" RequestedTheme="Light" HorizontalContentAlignment="Right" IsEnabled="False"                       />
+                </StackPanel>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Page>
+

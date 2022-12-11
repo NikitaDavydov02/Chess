@@ -1,0 +1,191 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>NIKITA</Machine>
+    <WindowsUser>nikit</WindowsUser>
+    <TargetPlatformIdentifier>Windows</TargetPlatformIdentifier>
+    <TargetOsVersion>6.3</TargetOsVersion>
+    <TargetOsDescription>Windows 8.1</TargetOsDescription>
+    <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
+    <PackageArchitecture>neutral</PackageArchitecture>
+    <PackageIdentityName>3bfe70ff-c5ec-4ae3-b10c-97c4e39084d5</PackageIdentityName>
+    <PackageIdentityPublisher>CN=nikit</PackageIdentityPublisher>
+    <IntermediateOutputPath>D:\Документы\C#\Шахматы\Шахматы\Шахматы.Windows\obj\Debug\</IntermediateOutputPath>
+    <RemoteDeploymentType>
+    </RemoteDeploymentType>
+    <PackageRegistrationPath>
+    </PackageRegistrationPath>
+    <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
+    <RegisteredManifestChecksum>36A66EA210B3337C1718D80F2A61867473DE89BA3A57ADC7CADC8CA025908AC6</RegisteredManifestChecksum>
+    <RegisteredPackageMoniker>3bfe70ff-c5ec-4ae3-b10c-97c4e39084d5_1.0.0.0_neutral__e0czjm4dkbe7e</RegisteredPackageMoniker>
+    <RegisteredUserModeAppID>3bfe70ff-c5ec-4ae3-b10c-97c4e39084d5_e0czjm4dkbe7e!App</RegisteredUserModeAppID>
+    <RegisteredPackageID>3bfe70ff-c5ec-4ae3-b10c-97c4e39084d5</RegisteredPackageID>
+    <RegisteredPackagePublisher>CN=nikit</RegisteredPackagePublisher>
+    <RegisteredVersion>1.0.0.0</RegisteredVersion>
+    <JitOptimizationSuppressed>True</JitOptimizationSuppressed>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="D:\Документы\C#\Шахматы\Шахматы\Шахматы.Windows\bin\Debug\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2017-12-19T14:25:36.559</Modified>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="D:\Документы\C#\Шахматы\Шахматы\Шахматы.Windows\bin\Debug\Шахматы.Windows.exe">
+      <PackagePath>Шахматы.Windows.exe</PackagePath>
+      <Modified>2019-08-26T10:00:16.138</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Документы\C#\Шахматы\Шахматы\Шахматы.Windows\Assets\BlackBishop.png">
+      <PackagePath>Assets\BlackBishop.png</PackagePath>
+      <Modified>2017-10-17T15:08:42.261</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Документы\C#\Шахматы\Шахматы\Шахматы.Windows\Assets\BlackKing.png">
+      <PackagePath>Assets\BlackKing.png</PackagePath>
+      <Modified>2017-10-17T15:08:42.875</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Документы\C#\Шахматы\Шахматы\Шахматы.Windows\Assets\BlackKnife.png">
+      <PackagePath>Assets\BlackKnife.png</PackagePath>
+      <Modified>2017-10-17T15:08:43.319</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Документы\C#\Шахматы\Шахматы\Шахматы.Windows\Assets\BlackPawn.png">
+      <PackagePath>Assets\BlackPawn.png</PackagePath>
+      <Modified>2017-10-17T15:08:43.771</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Документы\C#\Шахматы\Шахматы\Шахматы.Windows\Assets\BlackQueen.png">
+      <PackagePath>Assets\BlackQueen.png</PackagePath>
+      <Modified>2017-11-17T15:19:59.268</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Документы\C#\Шахматы\Шахматы\Шахматы.Windows\Assets\BlackRook.png">
+      <PackagePath>Assets\BlackRook.png</PackagePath>
+      <Modified>2017-10-17T15:08:44.388</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Документы\C#\Шахматы\Шахматы\Шахматы.Windows\Assets\BlackUsual.png">
+      <PackagePath>Assets\BlackUsual.png</PackagePath>
+      <Modified>2017-10-26T15:41:14.155</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Документы\C#\Шахматы\Шахматы\Шахматы.Windows\Assets\ChessField.png">
+      <PackagePath>Assets\ChessField.png</PackagePath>
+      <Modified>2017-10-12T15:23:02.361</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Документы\C#\Шахматы\Шахматы\Шахматы.Windows\Assets\ChessFieldGreen.png">
+      <PackagePath>Assets\ChessFieldGreen.png</PackagePath>
+      <Modified>2017-10-16T16:24:55.468</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Документы\C#\Шахматы\Шахматы\Шахматы.Windows\Assets\Comp.png">
+      <PackagePath>Assets\Comp.png</PackagePath>
+      <Modified>2017-12-11T17:21:08.012</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Документы\C#\Шахматы\Шахматы\Шахматы.Windows\Assets\Flags\США.png">
+      <PackagePath>Assets\Flags\США.png</PackagePath>
+      <Modified>2017-10-20T13:48:07.197</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Документы\C#\Шахматы\Шахматы\Шахматы.Windows\Assets\Flags\Россия.png">
+      <PackagePath>Assets\Flags\Россия.png</PackagePath>
+      <Modified>2017-10-20T13:47:37.259</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Документы\C#\Шахматы\Шахматы\Шахматы.Windows\Assets\Logo.scale-100.png">
+      <PackagePath>Assets\Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-07-06T20:16:00.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Документы\C#\Шахматы\Шахматы\Шахматы.Windows\Assets\MayMove.png">
+      <PackagePath>Assets\MayMove.png</PackagePath>
+      <Modified>2017-11-13T16:46:45.778</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Документы\C#\Шахматы\Шахматы\Шахматы.Windows\Assets\NoImage.png">
+      <PackagePath>Assets\NoImage.png</PackagePath>
+      <Modified>2017-10-20T14:09:38.022</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Документы\C#\Шахматы\Шахматы\Шахматы.Windows\Assets\SmallLogo.scale-100.png">
+      <PackagePath>Assets\SmallLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-07-06T20:16:00.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Документы\C#\Шахматы\Шахматы\Шахматы.Windows\Assets\SplashScreen.scale-100.png">
+      <PackagePath>Assets\SplashScreen.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-07-06T20:16:00.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Документы\C#\Шахматы\Шахматы\Шахматы.Windows\Assets\StoreLogo.scale-100.png">
+      <PackagePath>Assets\StoreLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-07-06T20:16:00.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Документы\C#\Шахматы\Шахматы\Шахматы.Windows\Assets\WhiteBishop.png">
+      <PackagePath>Assets\WhiteBishop.png</PackagePath>
+      <Modified>2017-10-17T15:08:44.701</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Документы\C#\Шахматы\Шахматы\Шахматы.Windows\Assets\WhiteKing.png">
+      <PackagePath>Assets\WhiteKing.png</PackagePath>
+      <Modified>2017-10-17T15:08:46.630</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Документы\C#\Шахматы\Шахматы\Шахматы.Windows\Assets\WhiteKnife.png">
+      <PackagePath>Assets\WhiteKnife.png</PackagePath>
+      <Modified>2017-10-17T15:08:46.668</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Документы\C#\Шахматы\Шахматы\Шахматы.Windows\Assets\WhitePawn.png">
+      <PackagePath>Assets\WhitePawn.png</PackagePath>
+      <Modified>2017-10-17T15:08:46.719</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Документы\C#\Шахматы\Шахматы\Шахматы.Windows\Assets\WhiteQueen.png">
+      <PackagePath>Assets\WhiteQueen.png</PackagePath>
+      <Modified>2017-11-17T15:19:58.522</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Документы\C#\Шахматы\Шахматы\Шахматы.Windows\Assets\WhiteRook.png">
+      <PackagePath>Assets\WhiteRook.png</PackagePath>
+      <Modified>2017-10-17T15:08:46.824</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Документы\C#\Шахматы\Шахматы\Шахматы.Windows\Assets\WhiteUsual.png">
+      <PackagePath>Assets\WhiteUsual.png</PackagePath>
+      <Modified>2017-10-26T15:41:12.017</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Документы\C#\Шахматы\Шахматы\Шахматы.Windows\bin\Debug\Шахматы.Windows.xr.xml">
+      <PackagePath>Шахматы.Windows.xr.xml</PackagePath>
+      <Modified>2017-12-12T15:01:21.523</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Документы\C#\Шахматы\Шахматы\Шахматы.Windows\bin\Debug\App.xbf">
+      <PackagePath>App.xbf</PackagePath>
+      <Modified>2017-11-12T10:16:59.091</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Документы\C#\Шахматы\Шахматы\Шахматы.Windows\bin\Debug\View\AboutProgram.xbf">
+      <PackagePath>View\AboutProgram.xbf</PackagePath>
+      <Modified>2017-11-12T10:16:59.091</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Документы\C#\Шахматы\Шахматы\Шахматы.Windows\bin\Debug\View\FigureControl.xbf">
+      <PackagePath>View\FigureControl.xbf</PackagePath>
+      <Modified>2017-11-12T10:16:59.091</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Документы\C#\Шахматы\Шахматы\Шахматы.Windows\bin\Debug\View\MainPage.xbf">
+      <PackagePath>View\MainPage.xbf</PackagePath>
+      <Modified>2017-11-12T10:16:59.092</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Документы\C#\Шахматы\Шахматы\Шахматы.Windows\bin\Debug\View\PlayWithComputer.xbf">
+      <PackagePath>View\PlayWithComputer.xbf</PackagePath>
+      <Modified>2017-12-12T15:21:23.355</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Документы\C#\Шахматы\Шахматы\Шахматы.Windows\bin\Debug\View\PlayWithComputerSettings.xbf">
+      <PackagePath>View\PlayWithComputerSettings.xbf</PackagePath>
+      <Modified>2017-12-22T13:28:43.830</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Документы\C#\Шахматы\Шахматы\Шахматы.Windows\bin\Debug\View\SettingsPage.xbf">
+      <PackagePath>View\SettingsPage.xbf</PackagePath>
+      <Modified>2017-11-12T10:16:59.093</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Документы\C#\Шахматы\Шахматы\Шахматы.Windows\bin\Debug\View\TwoPlayers.xbf">
+      <PackagePath>View\TwoPlayers.xbf</PackagePath>
+      <Modified>2017-11-28T15:17:05.671</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Документы\C#\Шахматы\Шахматы\Шахматы.Windows\bin\Debug\View\TwoPlayersSettingsPage.xbf">
+      <PackagePath>View\TwoPlayersSettingsPage.xbf</PackagePath>
+      <Modified>2017-12-21T19:06:39.692</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Документы\C#\Шахматы\Шахматы\Шахматы.Windows\bin\Debug\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2017-12-19T14:25:35.416</Modified>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+</Project>

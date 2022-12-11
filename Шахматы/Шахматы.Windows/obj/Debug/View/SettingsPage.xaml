@@ -1,0 +1,91 @@
+﻿<Page
+    x:Name="pageRoot"
+    x:Class="Шахматы.View.SettingsPage"
+    DataContext="{Binding DefaultViewModel, RelativeSource={RelativeSource Self}}"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Шахматы.View"
+    xmlns:common="using:Шахматы.Common"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Page.Resources>
+        <!-- TODO: Delete this line if the key AppName is declared in App.xaml -->
+        <x:String x:Key="AppName">Settings</x:String>
+    </Page.Resources>
+
+    <!--
+        This grid acts as a root panel for the page that defines two rows:
+        * Row 0 contains the back button and page title
+        * Row 1 contains the rest of the page layout
+    -->
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.ChildrenTransitions>
+            <TransitionCollection>
+                <EntranceThemeTransition/>
+            </TransitionCollection>
+        </Grid.ChildrenTransitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="140"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Back button and page title -->
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="120"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="backButton" Margin="39,59,39,0" Command="{Binding NavigationHelper.GoBackCommand, ElementName=pageRoot}"
+                        Style="{StaticResource NavigationBackButtonNormalStyle}"
+                        VerticalAlignment="Top"
+                        AutomationProperties.Name="Back"
+                        AutomationProperties.AutomationId="BackButton"
+                        AutomationProperties.ItemType="Navigation Button"/>
+            <TextBlock x:Name="pageTitle" Text="{StaticResource AppName}" Style="{StaticResource HeaderTextBlockStyle}" Grid.Column="1" 
+                        IsHitTestVisible="false" TextWrapping="NoWrap" VerticalAlignment="Bottom" Margin="0,0,30,40"/>
+        </Grid>
+        <StackPanel Grid.Row="1">
+            <ScrollViewer Width="550">
+                <StackPanel Width="500" HorizontalAlignment="Center" Margin="0,50,0,0" Background="White">
+                    <!--<StackPanel Orientation="Horizontal" Width="400" HorizontalAlignment="Center" Margin="0,50,0,0">
+                <TextBlock Text="Language" Foreground="Black"/>
+                <ComboBox Width="250" Margin="20,0,0,0" BorderBrush="Gray" Background="LightGray" x:Name="languageBox"/>
+            </StackPanel>-->
+                    <StackPanel Orientation="Horizontal" Width="400" HorizontalAlignment="Center" Margin="0,30,0,0">
+                        <TextBlock Text="Valume" Foreground="Black" VerticalAlignment="Center"/>
+                        <Slider Width="300" Minimum="0" Maximum="100" Height="20" Background="Gray" Foreground="Blue" VerticalAlignment="Center" Margin="90,0,0,0"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Width="400" HorizontalAlignment="Center" Margin="0,10,0,0">
+                        <TextBlock Text="Difficulty of the game" Foreground="Black" VerticalAlignment="Center"/>
+                        <Slider Width="300" Minimum="0" Maximum="10" Height="20" Background="Gray" Foreground="Blue" VerticalAlignment="Center" Margin="20,0,0,0"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Width="400" HorizontalAlignment="Center" Margin="0,50,0,0">
+                        <TextBlock Text="Algorithm" Foreground="Black"/>
+                        <ComboBox x:ConnectionId='2' Width="250" Margin="20,0,0,0" BorderBrush="Gray" Background="LightGray" x:Name="algorithmBox"                                             />
+                    </StackPanel>
+                    <StackPanel Width="400" HorizontalAlignment="Center" Margin="0,20,0,0" Background="LightSkyBlue">
+                        <TextBlock x:Name="discription" TextAlignment="Center" Margin="5"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Width="400" HorizontalAlignment="Center" Margin="0,50,0,0">
+                        <TextBlock Text="Design of pieces" Foreground="Black"/>
+                        <ComboBox x:ConnectionId='1' Width="250" Margin="20,0,0,0" BorderBrush="Gray" Background="LightGray" x:Name="designOfPiecesBox"                                                  />
+                    </StackPanel>
+                    <!--<Image Source="/Assets/ChessFieldGreen.png" Width="338" Margin="0,30,0,0"/> -->
+                    <Image Source="/Assets/ChessFieldGreen.png" Width="338" Margin="0,30,0,0"/>
+                    <ItemsControl x:Name="playArea" HorizontalAlignment="Center">
+                        <ItemsControl ItemsSource="{Binding Figures}">
+                            <ItemsControl.ItemsPanel>
+                                <ItemsPanelTemplate>
+                                    <Canvas Background="Transparent" Margin="26,-364,0,0" Width="312" Height="312"/>
+                                </ItemsPanelTemplate>
+                            </ItemsControl.ItemsPanel>
+                        </ItemsControl>
+                    </ItemsControl>
+                </StackPanel>
+            </ScrollViewer>
+        </StackPanel>
+    </Grid>
+</Page>
+
